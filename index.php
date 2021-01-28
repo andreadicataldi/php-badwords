@@ -11,9 +11,14 @@
   <?php
   $text = 'PHP è un linguaggio';
   $badword = $_GET['badword'];
-  $badword = '***'
   ?>
-  <h1><?php var_dump($text . ' ' . $badword); ?></h1>
+  <h2>Lunghezza paragrafo</h2>
+  <p><?php
+      $textLength = strlen($text . ' ' . $badword);
+      echo $textLength; ?> </p>
+  <h2>Paragrafo</h2>
+  <p><?php echo str_replace($badword, '***', $text . ' ' . $badword); ?></p>
+
 </body>
 
 </html>
